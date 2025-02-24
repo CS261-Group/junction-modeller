@@ -1,0 +1,23 @@
+#heroSection {
+    background-color: black;
+    background-position: center; 
+    background-size: cover;
+
+    color:white;
+    font-family: sans-serif;
+}
+
+h5 {
+    font-family: sans-serif;
+}
+
+a {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}

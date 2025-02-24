@@ -17,13 +17,22 @@
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-   
+        <link href="/Stylesheets/LandingPage.css" rel="stylesheet">
     </head>
 
     <body>
-        {% include HeaderBar.html %}
-        <h1> TESTING TESTING</h1>
-
-        <p> hello there! </p>
+        <section id="heroSection" class="min-vh-500 d-flex align-items-center text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 data-aos="fade-left" class="text-uppercase text-white fw-semibold display-1">Junction Modeller</h1>
+                        <h5 class="text-white mt-3 mb-4" data-aos="fade-right">Model, Visualise, Optimise</h5>
+                        <div data-aos="fade-up" data-aos-delay="50">
+                            <a href="/junction-modeller.github.io/Install/" class="btn"> <strong>Install</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>

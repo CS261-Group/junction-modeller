@@ -5,11 +5,26 @@
         </div>
 
         <ul class="nav navbar-nav">
-        <li class="active"><a href="/junction-modeller.github.io/"></a></li>
+        
+        <!-- Hard-coding the selected headerbar buttons lmao -->
 
-        <li><a href="#">Install</a></li>
-        <li><a href="/About">About</a></li>
-        <li><a href="#">Meet the Team </a></li>
+        {% if include.selection == "Install" %}
+            <li class="active"><a href="/junction-modeller.github.io/Install">Install</a></li>
+        {% else %}
+        <li><a href="/junction-modeller.github.io/Install">Install</a></li>
+        {% endif %}
+
+        {% if include.selection == "About" %}
+            <li class="active"><a href="/junction-modeller.github.io/About">About</a></li>
+        {% else %}
+            <li><a href="/junction-modeller.github.io/About">About</a></li>
+        {% endif %}
+
+        {% if include.selection == "Team" %}
+            <li class="active"><a href="/junction-modeller.github.io/Team">Meet the Team</a></li>
+        {% else %}
+            <li><a href="/junction-modeller.github.io/Team">Meet the Team</a></li>
+        {% endif %}
         </ul>
     </div>
 </nav>
