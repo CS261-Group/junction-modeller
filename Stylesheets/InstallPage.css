@@ -1,0 +1,17 @@
+table#StandardInstallations {
+    border: 1px solid black;
+
+
+    /* Dimensions */
+    width: 60%;
+    margin-left: 10%;
+
+}
+
+table#StandardInstallations th {
+    border: 1px solid black;
+}
+
+table#StandardInstallations td {
+    border: 1px solid black;
+}
