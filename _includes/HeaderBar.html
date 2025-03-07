@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/junction-modeller.github.io/">Junction Modeller </a>
+            <a class="navbar-brand" href="{{ site.baseurl }}/">Junction Modeller </a>
         </div>
 
         <ul class="nav navbar-nav">
@@ -9,21 +9,21 @@
         <!-- Hard-coding the selected headerbar buttons lmao -->
 
         {% if include.selection == "Install" %}
-            <li class="active"><a href="/junction-modeller.github.io/Install">Install</a></li>
+            <li class="active"><a href="{{ site.baseurl }}/Install">Install</a></li>
         {% else %}
-        <li><a href="/junction-modeller.github.io/Install">Install</a></li>
+        <li><a href="{{ site.baseurl }}/Install">Install</a></li>
         {% endif %}
 
         {% if include.selection == "About" %}
-            <li class="active"><a href="/junction-modeller.github.io/About">About</a></li>
+            <li class="active"><a href="{{ site.baseurl }}/About">About</a></li>
         {% else %}
-            <li><a href="/junction-modeller.github.io/About">About</a></li>
+            <li><a href="{{ site.baseurl }}/About">About</a></li>
         {% endif %}
 
         {% if include.selection == "Team" %}
-            <li class="active"><a href="/junction-modeller.github.io/Team">Meet the Team</a></li>
+            <li class="active"><a href="{{ site.baseurl }}/Team">Meet the Team</a></li>
         {% else %}
-            <li><a href="/junction-modeller.github.io/Team">Meet the Team</a></li>
+            <li><a href="{{ site.baseurl }}/Team">Meet the Team</a></li>
         {% endif %}
         </ul>
     </div>
