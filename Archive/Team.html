@@ -18,33 +18,36 @@ permalink: /Team/
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="{{ site.baseurl }}/Stylesheets/Default.css" rel="stylesheet">
     </head>
 
     <body>
         {% include HeaderBar.html selection="Team" %}
 
-        <h1> Meet the Team </h1>
+        <section>
+            <h1> Meet the Team </h1>
 
-        <div class="container">
-            <div class="panel panel-default">
-                <div class="panel-heading">David Rosental</div>
-                <div class="panel-body">
-                    <h2>Project Manager</h2>
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">David Rosental</div>
+                    <div class="panel-body">
+                        <h2>Project Manager</h2>
+
+                        <img src="{{ site.baseurl }}/Assets/David.jpg" class="img-circle" alt="Cinque Terre">
+
+                        <p>Directed the project.</p>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Jachym Tolar</div>
+                    <div class="panel-body">Algorithms</div>
 
                     <img src="{{ site.baseurl }}/Assets/David.jpg" class="img-circle" alt="Cinque Terre">
 
-                    <p>Directed the project.</p>
+                    <p>Designed algorithms for the project. </p>
                 </div>
             </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">Jachym Tolar</div>
-                <div class="panel-body">Algorithms</div>
-
-                <img src="{{ site.baseurl }}/Assets/David.jpg" class="img-circle" alt="Cinque Terre">
-
-                <p>Designed algorithms for the project. </p>
-            </div>
-        </div>
+        </section>
     </body>
 </html>

@@ -21,61 +21,64 @@ permalink: /Install/
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="{{ site.baseurl }}/Stylesheets/Default.css" rel="stylesheet">
         <link href="{{ site.baseurl }}/Stylesheets/InstallPage.css" rel="stylesheet">
     </head>
 
     <body>
         {% include HeaderBar.html selection="Install" %}
 
-        <p> 
-            We provide two different installation methods: Standard Installations and Jar file. 
-            If your platform has a Standard Installation, then please use that. 
-            If your platform does not (or the Standard Installation breaks), then please refer to the Jar instructions.
-        </p>
+        <section>
+            <p> 
+                We provide two different installation methods: Standard Installations and Jar file. 
+                If your platform has a Standard Installation, then please use that. 
+                If your platform does not (or the Standard Installation breaks), then please refer to the Jar instructions.
+            </p>
 
-        <h1> Standard Installations </h1>
-        
-        <table id="StandardInstallations">
-            <tr>
-                <th>Installation Name</th>
-                <th>Latest Release</th>
-                <th>Platforms</th>
-            </tr>
+            <h1> Standard Installations </h1>
+            
+            <table id="StandardInstallations">
+                <tr>
+                    <th>Installation Name</th>
+                    <th>Latest Release</th>
+                    <th>Platforms</th>
+                </tr>
 
-            <tr>
-                <td>Standard Exe</td>
-                <td><a href="https://github.com/CS261-Group/Traffic_Junction_Modeller/releases/tag/test">v0.0</a></td>
-                <td>Windows</td>
-            </tr>
-        </table>
+                <tr>
+                    <td>Standard Exe</td>
+                    <td><a href="https://github.com/CS261-Group/Traffic_Junction_Modeller/releases/tag/test">v0.0</a></td>
+                    <td>Windows</td>
+                </tr>
+            </table>
 
-        <h1> Jar Instructions </h1>
+            <h1> Jar Instructions </h1>
 
-        <ul>
-            <li>Please install the latest Jar file <a href="https://github.com/CS261-Group/Traffic_Junction_Modeller/releases/tag/test">here</a>.</li>
+            <ul>
+                <li>Please install the latest Jar file <a href="https://github.com/CS261-Group/Traffic_Junction_Modeller/releases/tag/test">here</a>.</li>
 
-            <li>Jar files can be run on any OS with a Java Virtual Machine (JVM). 
-                As such, please install a JVM <a href="">here</a>. 
-                
-                <br>
+                <li>Jar files can be run on any OS with a Java Virtual Machine (JVM). 
+                    As such, please install a JVM <a href="">here</a>. 
+                    
+                    <br>
 
-                You should use Java version 23.0.2 for best results
-                (you can check your version by running <strong>java --version</strong> in a terminal/command-prompt).
+                    You should use Java version 23.0.2 for best results
+                    (you can check your version by running <strong>java --version</strong> in a terminal/command-prompt).
 
-            </li>
+                </li>
 
-            <li>
-                Navigate to where your Jar file is stored. 
-                Open a terminal at the folder where the Jar file is stored, and run the following command:
+                <li>
+                    Navigate to where your Jar file is stored. 
+                    Open a terminal at the folder where the Jar file is stored, and run the following command:
 
-                <pre>
-                    <code lang="language-bash">
-                        java -cp nameOfJarFile.jar uk.ac.warwick.dcs.junctionmodeller.App
-                    </code>
-                </pre>
-                <emph>Note you will have to replace "nameOfJarFile.jar" with the name of your Jar file</emph>
+                    <pre>
+                        <code lang="language-bash">
+                            java -cp nameOfJarFile.jar uk.ac.warwick.dcs.junctionmodeller.App
+                        </code>
+                    </pre>
+                    <emph>Note you will have to replace "nameOfJarFile.jar" with the name of your Jar file</emph>
 
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </section>
     </body>
 </html>
