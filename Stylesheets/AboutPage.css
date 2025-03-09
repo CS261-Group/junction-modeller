@@ -2,3 +2,10 @@
     width: 50%;
 }
 
+body {
+    padding-bottom: 1rem;
+}
+
+.FAQuestionBlock {
+    margin-bottom: 0.2rem;
+}

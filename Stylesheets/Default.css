@@ -2,3 +2,8 @@ section {
     margin-left:1%;
     width:95%;
 }
+
+.navbar {
+    border-radius: 0px;
+}
+
