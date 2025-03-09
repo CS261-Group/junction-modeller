@@ -12,13 +12,14 @@ permalink: /About/
 
         <title> About the Junction Modeller </title>
 
-        <!-- Libraries (we use CDNs since it's faster for users that have visited jQuery & boostrap based sites before) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+         <!-- Libraries (we use CDNs since it's faster for users that have visited jQuery & boostrap based sites before) -->
+         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+ 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link href="{{ site.baseurl }}/Stylesheets/Default.css" rel="stylesheet">
+        <link href="{{ site.baseurl }}/Stylesheets/AboutPage.css" rel="stylesheet">
     </head>
 
     <body>
@@ -27,7 +28,90 @@ permalink: /About/
         <section>
             <h1> About the Junction Modeller </h1>
 
-            <p> Modelling junctions. Tweak parameters to create a configuration. Metrics for each configuration. </p>
+            <p> Traffic Junction Modeller is an app for quickly analysing and comparing simple traffic-light controlled junctions.  </p>
+
+            <h2>What is a Junction? </h2>
+
+            <p>
+                Junctions are modelled on the following characteristics: 
+
+                <ul>
+                    <li> 
+                        Number of lanes for each of the 4 branches of the junction. The branches are represented by North, East, South and West roads. 
+                    </li>
+
+                    <li>
+                        Incoming flow for each of the four roads. 
+                        The incoming flow is a measure of how many vehicles arrive at the junction from that direction in an hour, in vehicles/hour. 
+                    </li>
+
+                    <li>
+                        Outgoing flows, also called saturation flow*, for each of the turning directions in a road. 
+                        Outgoing flows are a measure of how many vehicles can move out of a single lane into the junction if there was a continuous stream of vehicles with a constant green light for an hour. 
+                        Outgoing flow is measured in vehicles/hour. The input for each of the three turning directions should be a representative outgoing flow for a lane that allows that turning direction. 
+                    </li>
+
+                    <li>
+                        Type of traffic lights used, either fixed-timing traffic lights, or actuated traffic lights that change how long lights are green for based on how much traffic is coming into the road. 
+                    </li>
+
+                    <li>
+                        Group of each lane, which represent which lanes turn green together, and the order in which they turn green. Lanes of the same group will go green at the same time 
+                    </li>
+
+                    <li>
+                        Group timings, representing how long each group of lanes turn green for. Measured in seconds, these values are only valid for fixed-time traffic lights. 
+                    </li>
+                </ul>
+
+                <em>For more information on getting the saturation flow of a road see: <a href=" https://help.goodvisionlive.com/en/articles/3915061-how-to-calculate-saturation-flows">How to calculate saturation flows</a> </em>
+            </p>
+
+            <h2>How are Junctions evaluated?</h2>
+
+            <p>
+                Junctions are evaluated on the following metrics:
+
+                <ul>
+                    <li>
+                        Average wait time. This is the average delay of a lane, averaged across all lanes in the junction. 
+                    </li>
+
+                    <li>
+                        Average queue length. Represents the average length of the queue when a vehicle arrives into a lane, averaged across all lanes. 
+                    </li>
+
+                    <li>
+                        Maximum queue length is the maximum of all lanes average queue lengths. 
+                    </li>
+                </ul>
+
+                Evaluating the junction may also involve letting the Junction Modeller optimise traffic light values. 
+                The Modeller will try to find values that minimise these metrics, whilst respecting the characteristics of the junction. 
+            </p>
+
+            <h2>FAQ</h2>
+
+            <p>Since there are no users, it's more like what-we-think-would-be-frequently-asked-questions but <em>WWTWBFAQ</em> isn't as catchy of an initialism.</p>
+            
+            {% include FAQuestion.html 
+                id="CanModel" 
+                buttonText="What junctions can’t be modelled? " 
+                bodyText="Junctions in the software are restricted to exactly 4 directions, and to box junctions - where there are no opposed right turns. " 
+            %}
+
+            {% include FAQuestion.html 
+                id="ValuesToUse" 
+                buttonText="What values should I use?" 
+                bodyText="Initial values should be obtained by surveying the junction that is being re-modelled. From there values can be modified to find an optimal configuration, or to account for planned changes." 
+            %}
+
+            {% include FAQuestion.html 
+                id="TargetAudience" 
+                buttonText="Who is the Junction Modeller for?" 
+                bodyText="The modeller is intended to be used in the early stages of planning changes to a junction. It does not guarantee optimal values for traffic light timings and so should not be used for final junction designs. Experienced traffic engineers will get the most benefit from the fast evaluation of different junction configurations. " 
+            %}
+
         </section>
     </body>
 </html>
